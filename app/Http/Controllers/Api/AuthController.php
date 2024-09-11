@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Utils\RespondsWithHttpStatus;
 use App\Interfaces\IAuthService;
 use App\Http\Requests\AuthRequest;
-use Illuminate\Support\Facades\Auth;
+use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
 {
@@ -31,7 +31,7 @@ class AuthController extends Controller
         if (!$user->active)
             return $this->response(code: 401, message: 'Usuario desactivado');
 
-        $token = Auth::attempt($credentials);
+        $token = JWTAuth::attempt($credentials);
 
         if (!$token) {
             return $this->response(code: 401, message: 'Credenciales invalidas');
@@ -51,7 +51,7 @@ class AuthController extends Controller
 
     public function logout()
     {
-        Auth::logout();
+        JWTAuth::parseToken()->invalidate(true);
         return $this->response(code: 200, message: 'Sesion finalizada');
     }
 }
