@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PanelAdminController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetPasswordController;
@@ -54,4 +55,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
     Route::get('/tasks/{id}', [TaskController::class, 'show']);
     Route::put('/tasks/update', [TaskController::class, 'update']);
+
+    // ruta solo para administradores
+    Route::get('/admin/panel', [PanelAdminController::class, 'panel'])->middleware('admin.verify');
 });

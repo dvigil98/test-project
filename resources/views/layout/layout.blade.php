@@ -41,12 +41,14 @@
                                 <p>Proyectos</p>
                             </a>
                         </li>
+                        @if(Auth::user()->role->name == 'Admin')
                         <li class="nav-item">
-                            <a href="/admin/panel" class="nav-link" id="projects">
+                            <a href="/admin/panel" class="nav-link" id="panel">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>Panel para admin</p>
                             </a>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a href="/logout" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -73,4 +73,14 @@ class ProjectService implements IProjectService
             return $th;
         }
     }
+
+    public function getTotalOfRegisteredProjects()
+    {
+        try {
+            $nProjects = $this->projectRepository->getTotalOfRegisteredProjects();
+            return $nProjects;
+        } catch (\Throwable $th) {
+            return $th;
+        }
+    }
 }

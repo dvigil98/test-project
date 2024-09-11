@@ -10,4 +10,7 @@ interface ITaskService
     public function getTask($id);
     public function updateTask($data, $id);
     public function deleteTask($id);
+    public function getTotalsOfPendingTasks();
+    public function getTotalsOfTasksInProcess();
+    public function getTotalsOfTasksDone();
 }

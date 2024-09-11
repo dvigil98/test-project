@@ -9,4 +9,5 @@ interface IProjectService
     public function getProject($id);
     public function updateProject($data, $id);
     public function deleteProject($id);
+    public function getTotalOfRegisteredProjects();
 }

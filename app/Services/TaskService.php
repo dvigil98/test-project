@@ -87,4 +87,32 @@ class TaskService implements ITaskService
             return $th;
         }
     }
+
+    public function getTotalsOfPendingTasks()
+    {
+        try {
+            $nTasks = $this->taskRepository->getTotalsOfPendingTasks();
+            return $nTasks;
+        } catch (\Throwable $th) {
+            return $th;
+        }
+    }
+    public function getTotalsOfTasksInProcess()
+    {
+        try {
+            $nTasks = $this->taskRepository->getTotalsOfTasksInProcess();
+            return $nTasks;
+        } catch (\Throwable $th) {
+            return $th;
+        }
+    }
+    public function getTotalsOfTasksDone()
+    {
+        try {
+            $nTasks = $this->taskRepository->getTotalsOfTasksDone();
+            return $nTasks;
+        } catch (\Throwable $th) {
+            return $th;
+        }
+    }
 }

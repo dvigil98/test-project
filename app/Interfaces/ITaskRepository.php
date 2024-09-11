@@ -11,4 +11,7 @@ interface ITaskRepository
     public function saveOrUpdate(Task $task);
     public function getById($id);
     public function delete($id);
+    public function getTotalsOfPendingTasks();
+    public function getTotalsOfTasksInProcess();
+    public function getTotalsOfTasksDone();
 }
