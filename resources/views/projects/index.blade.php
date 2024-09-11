@@ -44,6 +44,7 @@
                                         <td>{{ $project->description }}</td>
                                         <td class="text-right">
                                             <div class="btn-group">
+                                                <a href="/projects/{{ $project->id }}/tasks" class="btn btn-light border" title="Agregar tareas"><i class="fas fa-plus-circle"></i></a>
                                                 <a href="/projects/{{ $project->id }}" class="btn btn-light border" title="Ver"><i class="fas fa-info-circle"></i></a>
                                                 <a href="/projects/{{ $project->id }}/edit" class="btn btn-light border" title="Editar"><i class="fas fa-marker"></i></a>
                                                 <a href="#" class="btn btn-light border" title="Eliminar" data-toggle="modal" data-target="#exampleModal{{ $project->id }}"><i class="fas fa-trash"></i></a>

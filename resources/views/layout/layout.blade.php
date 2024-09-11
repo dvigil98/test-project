@@ -42,9 +42,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/admin/panel" class="nav-link" id="projects">
                                 <i class="nav-icon fas fa-th"></i>
-                                <p>Usuarios</p>
+                                <p>Panel para admin</p>
                             </a>
                         </li>
                         <li class="nav-item">

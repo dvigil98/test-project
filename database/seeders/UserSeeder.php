@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
                 'name' => 'Mike McMillan',
                 'email' => 'mike@email.com',
                 'password' => 'password',
-                'active' => 1
+                'active' => 0
             ],
         ];
 

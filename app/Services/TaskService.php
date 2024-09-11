@@ -25,6 +25,16 @@ class TaskService implements ITaskService
         }
     }
 
+    public function getTasksByProject($project_id)
+    {
+        try {
+            $tasks = $this->taskRepository->getByProject($project_id);
+            return $tasks;
+        } catch (\Throwable $th) {
+            return $th;
+        }
+    }
+
     public function saveTask($data)
     {
         try {

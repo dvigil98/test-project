@@ -13,6 +13,12 @@ class TaskRepository implements ITaskRepository
         return $tasks;
     }
 
+    public function getByProject($project_id)
+    {
+        $tasks = Task::where('project_id', $project_id)->get();
+        return $tasks;
+    }
+
     public function saveOrUpdate(Task $task)
     {
         return $task->save();
