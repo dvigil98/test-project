@@ -71,4 +71,5 @@ Esquema de BBDD
 ## API
 En la carpeta "docs" se encuenta el "collection" de "Postman" para probar la funcionalidad de la API
 
-Enlace para ver la documentacion de la API: https://documenter.getpostman.com/view/28075836/2sAXqmBkDW#58b91f74-d4f6-4a8a-b5fb-1b388fd72a0c
+Enlace para ver la documentacion de la API:
+https://documenter.getpostman.com/view/28075836/2sAXqmBkNM
