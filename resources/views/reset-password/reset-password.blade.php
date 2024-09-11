@@ -14,8 +14,8 @@
         @include('layout/messages')
         <div class="card">
             <div class="card-body">
-                <p class="login-box-msg">Iniciar sesión</p>
-                <form action="/login" method="post">
+                <p class="login-box-msg">Recuperar contraseña</p>
+                <form action="/reset-password" method="post">
                     @csrf
                     @method('POST')
                     <div class="form-group">
@@ -23,14 +23,13 @@
                         <input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email..." value="{{ old('email') }}">
                     </div>
                     <div class="form-group">
-                        <label for="">Contraseña</label>
+                        <label for="">Nueva contraseña</label>
                         <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="Contraseña...">
                     </div>
                     <button class="btn btn-primary btn-block">
-                        Entrar
+                        Guardar
                     </button>
-                    <a href="/register" class="">Registrarse</a> <br>
-                    <a href="/reset-password" class="">Recuperar contraseña</a>
+                    <a href="/login" class="btn btn-dark btn-block">Cancelar</a>
                 </form>
             </div>
         </div>

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\TaskController;
 
 /*
@@ -23,6 +25,12 @@ Route::get('/', function () {
 
 // login
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('login');
+
+// register
+Route::match(['get', 'post'], '/register', [RegisterController::class, 'register']);
+
+// reset password
+Route::match(['get', 'post'], '/reset-password', [ResetPasswordController::class, 'resetPassword']);
 
 Route::middleware(['auth'])->group(function () {
 
