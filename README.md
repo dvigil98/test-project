@@ -22,6 +22,13 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 3 - cp .env.example .env <br>
 4 - php artisan key:generate <br>
 5 - php artisan jwt:secret <br>
+
+antes de correr las migraciones hay que configurar el archivo ".env" con las credenciales de la BBDD (En mi caso es así)
+
+Nota: Colocar su usuario y su contraseña como corresponda
+
+<img src="docs/BBDD/bdconfig.png">
+
 6 - php artisan migrate --seed
 
 ## Configuracion inicial
